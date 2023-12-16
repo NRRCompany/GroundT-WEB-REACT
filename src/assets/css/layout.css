@@ -92,3 +92,9 @@ nav a {
     color: var(--NavAccentColor);
     font-size: 1.35em;
 }
+
+/*App*/
+.App {
+    background: #0a53be;
+    width: 1000px;
+}
