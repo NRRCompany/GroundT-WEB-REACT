@@ -1,8 +1,7 @@
-import './App.css';
 // import React, {useEffect, useState} from "react";
 // import axios from "axios";
-import SideNavigation from "./layouts/SideNavigation";
-import { Route} from 'react-router-dom';
+import AppSideNavigation from "./components/SideNavigation";
+import { Route } from 'react-router-dom';
 
 
 function App() {
@@ -18,15 +17,12 @@ function App() {
 
   return (
     <div className="App">
-      <SideNavigation >
+      <AppSideNavigation >
         {/* Define your routes here */}
         <Route path="/menu1" render={() => <div>Content for menu1</div>} />
         <Route path="/menu2" render={() => <div>Content for menu2</div>} />
         <Route path="/menu3" render={() => <div>Content for menu3</div>} />
-      </SideNavigation>
-      <header className="App-header">
-        <button type="button" className="btn">Base class</button>
-      </header>
+      </AppSideNavigation>
     </div>
   );
 }
