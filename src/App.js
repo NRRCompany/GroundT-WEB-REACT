@@ -6,7 +6,7 @@ import Login from "./pages/login/login.jsx"
 function App() {
 
   return (
-    <div className="App">
+    <div className="contents">
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />

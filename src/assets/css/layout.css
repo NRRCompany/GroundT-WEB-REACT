@@ -1,3 +1,10 @@
+/*myApp*/
+.myApp {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 /* nav */
 :root {
     --NavAccentColor: #164863;
@@ -33,30 +40,25 @@ nav a {
     position: relative;
 }
 
-.nav_logo a:before,
-.nav_logo a:after {
-    content: '[';
-    display: inline-block;
-    position: relative;
-    top: 1px;
-    height: 100%;
-    font-size: 1.25em;
-    color: var(--NavAccentColor);
-    font-weight: bold;
 
-    transition: all 0.5s ease;
+/*contents*/
+@media (max-width: 600px) {
+    .body {
+        font-size: 14px;
+    }
+}
+.contents {
+    width: 100%;
+    flex: 1;
+    padding: 20px;
 }
 
-.nav_logo a:after { content: ']'; }
-
-.nav_logo a:hover:before {
-    transform: translateX(-5px);
-}
-
-.nav_logo a:hover:after {
-    transform: translateX(5px);
-}
 /*footer*/
+@media (max-width: 600px) {
+    .footer {
+        font-size: 14px;
+    }
+}
 .footer {
     background-color: darkgray;
     color: white;
@@ -68,32 +70,9 @@ nav a {
     height: 300px;
 }
 
-/*sideNavigation*/
-.sideNavigation {
-    background-color: #9BBEC8;
-    color: white;
-    position: fixed;
-    margin-left: 0;
-    width: 230px;
-    height: 100%;
-    text-align:center;
-    overflow:hidden;
-}
 
-.sideNavigation>ul {
-    display:inline-block
-}
-
-.sideNavigation>ul li{
- padding:0 30px 30px 30px;
-}
-
-.sideNavigation a {
-    color: var(--NavAccentColor);
-    font-size: 1.35em;
-}
-
-/*App*/
-.App {
-    width: 100%;
+@media (max-width: 600px) {
+    .homeDiv {
+        width: 100%; /* On smaller screens, display one column per row */
+    }
 }

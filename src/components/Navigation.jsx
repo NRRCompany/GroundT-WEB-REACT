@@ -8,13 +8,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navigation = () => {
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar expand="lg" className="bg-body-tertiary-gray" style={{background:'#3282B8'}}>
+            <Link to="/">
+                <div className="nav_logo">
+                    Ground <span>T</span>
+                </div>
+            </Link>
             <Container>
-                <Link to="/">
-                    <div className="nav_logo">
-                        Ground <span>T</span>
-                    </div>
-                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

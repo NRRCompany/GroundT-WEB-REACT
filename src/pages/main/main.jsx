@@ -1,5 +1,27 @@
 import React from 'react';
+import data from "bootstrap/js/src/dom/data";
 
+const modifyNumber = (time) => {
+    return parseInt(time) < 10 ? "0" + time : time;
+}
+
+const getDate = () => {
+    const date = new Date()
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    return year + " " + month + "/" + day;
+}
+const getClock = () => {
+    const date = new Date()
+    const hour = modifyNumber(date.getHours());
+    const min = modifyNumber(date.getMinutes());
+    const sec = modifyNumber(date.getSeconds());
+
+    return hour + " : " + min + " : " + sec;
+
+}
 const Main = () => {
     const homeDivWrapStyleObj = {
         display: 'flex',
@@ -31,11 +53,11 @@ const Main = () => {
             </div>
             <div  className="homeDiv" style={homDivStyleObj}>
                 <div>근태 정보</div>
-                <div>11/07 월요일
+                <div>{getDate()}
                     <div>출근 버튼</div>
                     <div>퇴근 버튼</div>
                 </div>
-                <div>12 : 00 : 00</div>
+                <div>{ getClock() }</div>
             </div>
         </div>
     );

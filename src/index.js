@@ -12,9 +12,11 @@ import "./assets/css/layout.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <AppNavigation />
-    <App />
-    <AppFooter />
+    <div className="myApp">
+        <AppNavigation />
+        <App />
+        <AppFooter />
+    </div>
   </BrowserRouter>
 );
 
