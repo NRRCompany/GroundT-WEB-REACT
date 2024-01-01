@@ -4,12 +4,20 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
+import personCircleImg from './person-circle.png'
 
 const Navigation = () => {
     const navLogStyleObj = {
         marginLeft: '15px',
     };
+
+    const personCircleImgStyleObj = {
+        width: '40px',
+        marginRight: '20px',
+    }
     return (
         <Navbar expand="lg" className="bg-body-tertiary-gray" style={{background:'#3282B8'}}>
             <Link to="/">
@@ -40,6 +48,15 @@ const Navigation = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Container>
+            <div>
+                <Link to="/login">
+                    <Row>
+                        <Col xs={6} md={4}>
+                            <Image style={ personCircleImgStyleObj } src={ personCircleImg } roundedCircle />
+                        </Col>
+                    </Row>
+                </Link>
+            </div>
         </Navbar>
     );
 };
