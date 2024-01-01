@@ -7,11 +7,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 const Navigation = () => {
+    const navLogStyleObj = {
+        marginLeft: '15px',
+    };
     return (
         <Navbar expand="lg" className="bg-body-tertiary-gray" style={{background:'#3282B8'}}>
             <Link to="/">
-                <div className="nav_logo">
-                    Ground <span>T</span>
+                <div style={navLogStyleObj}>
+                    <div className="nav_logo">
+                        Ground <span>T</span>
+                    </div>
                 </div>
             </Link>
             <Container>

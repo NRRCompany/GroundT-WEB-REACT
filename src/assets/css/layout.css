@@ -40,6 +40,25 @@ nav a {
     position: relative;
 }
 
+/*progressBar*/
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #dedede;
+    font-weight: 600;
+    font-size: .8rem;
+    border-radius: 40px;
+}
+
+.progress-bar .progress{
+    width: 72%;
+    height: 20px;
+    padding: 0;
+    text-align: center;
+    background-color: #3282B8;
+    color: #111;
+    border-radius: 40px;
+}
 
 /*contents*/
 @media (max-width: 600px) {
@@ -73,6 +92,6 @@ nav a {
 
 @media (max-width: 600px) {
     .homeDiv {
-        width: 100%; /* On smaller screens, display one column per row */
+        width: 100%;
     }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import data from "bootstrap/js/src/dom/data";
 
 const modifyNumber = (time) => {
@@ -13,7 +13,7 @@ const getDate = () => {
 
     return year + " " + month + "/" + day;
 }
-const getClock = () => {
+const getTime = () => {
     const date = new Date()
     const hour = modifyNumber(date.getHours());
     const min = modifyNumber(date.getMinutes());
@@ -22,42 +22,89 @@ const getClock = () => {
     return hour + " : " + min + " : " + sec;
 
 }
+
 const Main = () => {
+    const [time, setTime] = useState(getTime);
+    useEffect(()=> {
+        const timer = setInterval(()=> {
+            setTime(getTime());
+        }, 1000);
+        return () => {
+            clearInterval(timer);
+        }
+    })
     const homeDivWrapStyleObj = {
         display: 'flex',
         flexWrap: 'wrap',
     }
 
-    const homDivStyleObj = {
+    const homeDivStyleObj = {
         boxSizing: 'border-box',
-        width: '50%',
-        border:'1px solid black',
-        padding: '10px',
+        width: '40%',
+        border:'1px solid #B4B4B3',
+        borderRadius: '15px 15px 15px 15px',
+        padding: '20px',
+        margin: '5px',
     }
+
+    const homeDivTitleStyleObj = {
+        fontSize: '20pt',
+    }
+
+    const dateStyleObj = {
+        float: 'left',
+        marginRight: '40%',
+        fontSize: '15pt',
+    }
+
+    const buttonStyleObj1 = {
+        backgroundColor: '#B4B4B3',
+        borderColor: '#B4B4B3',
+        color: 'black',
+        marginRight: '10px',
+    }
+
+    const buttonStyleObj2 = {
+        backgroundColor: '#3282B8',
+        borderColor: '#3282B8',
+        color: 'white',
+    }
+
+    const timeStyleObj = {
+        fontSize: '23pt'
+    }
+
+
 
     return (
         <div className="homeDivWrap" style={homeDivWrapStyleObj}>
-            <div className="homeDiv" style={homDivStyleObj}>
-                <div>사용자 프로필</div>
+            <div className="homeDiv" style={homeDivStyleObj}>
+                <div className="homeDivTitle" style={homeDivTitleStyleObj}>사용자 프로필</div>
                 <div>
-                    <ul>
-                        <li>직원명 :</li>
-                        <li>소속 :</li>
-                        <li>직책 :</li>
-                    </ul>
+                    <div>직원명 : </div>
+                    <div>소속 : </div>
+                    <div>직책 : </div>
                 </div>
             </div>
-            <div  className="homeDiv" style={homDivStyleObj}>
-                <div>근무 시간</div>
-                <div>그래프가 들어갑니다</div>
-            </div>
-            <div  className="homeDiv" style={homDivStyleObj}>
-                <div>근태 정보</div>
-                <div>{getDate()}
-                    <div>출근 버튼</div>
-                    <div>퇴근 버튼</div>
+            <div className="homeDiv" style={homeDivStyleObj}>
+                <div className="homeDivTitle" style={homeDivTitleStyleObj}>근무 시간</div>
+                <div>
+                    <div className="progress-bar">
+                        <div className="progress">
+
+                        </div>
+                    </div>
+                    <div>0시간</div>
                 </div>
-                <div>{ getClock() }</div>
+            </div>
+            <div className="homeDiv" style={homeDivStyleObj}>
+                <div className="homeDivTitle" style={homeDivTitleStyleObj}>근태 정보</div>
+                <div>
+                    <div style={dateStyleObj}> {getDate()} </div>
+                    <div className="btn btn-primary" type="" style={buttonStyleObj1}>출근 버튼</div>
+                    <div className="btn btn-primary" type="" style={buttonStyleObj2}>퇴근 버튼</div>
+                </div>
+                <div style={timeStyleObj}>{ time }</div>
             </div>
         </div>
     );
