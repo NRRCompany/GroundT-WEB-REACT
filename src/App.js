@@ -6,6 +6,7 @@ import FindPassword from "./pages/login/findPassword";
 import SettingPassword from "./pages/login/settingPassword";
 import EmployeeManagement from "./pages/admin/employeeManagement";
 import EmployeeAdd from "./pages/admin/employeeAdd";
+import EmployeeCommute from "./pages/admin/employeeCommute";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/settingPassword" element={<SettingPassword />} />
             <Route path="/employeeManagement" element={<EmployeeManagement />} />
             <Route path="/employeeAdd" element={<EmployeeAdd />} />
+            <Route path="/employeeCommute" element={<EmployeeCommute />} />
         </Routes>
     </div>
   );

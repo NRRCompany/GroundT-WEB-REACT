@@ -50,7 +50,7 @@ const Navigation = () => {
                             <NavDropdown.Item href="/employeeAdd">
                                 직원 추가
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">직원 근태 관리</NavDropdown.Item>
+                            <NavDropdown.Item href="/employeeCommute">직원 근태 관리</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
