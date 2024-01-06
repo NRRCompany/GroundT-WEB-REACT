@@ -7,7 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
-import personCircleImg from './person-circle.png'
+import personCircleImg from './person-circle.png';
 
 const Navigation = () => {
     const navLogStyleObj = {
@@ -42,6 +42,13 @@ const Navigation = () => {
                             <NavDropdown.Item href="#action/3.4">
                                 Separated link
                             </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="관리자" id="admin-nav-dropdown">
+                            <NavDropdown.Item href="/employeeManagement">직원 관리</NavDropdown.Item>
+                            <NavDropdown.Item href="/employeeAdd">
+                                직원 추가
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="/employeeCommute">직원 근태 관리</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>
