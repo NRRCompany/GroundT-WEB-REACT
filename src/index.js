@@ -8,6 +8,7 @@ import {BrowserRouter} from "react-router-dom";
 import App from "./App";
 import "./assets/css/common.css";
 import "./assets/css/layout.css";
+import "./assets/css/attendanceManagement.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
