@@ -32,17 +32,11 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                             <Nav.Link href="/attendanceManagement">근태관리</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">
-                                Separated link
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                      <NavDropdown title="차량관리" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/vehicleSchedule">차량신청</NavDropdown.Item>
+                        <NavDropdown.Item href="/vehicleStatus">차량현황</NavDropdown.Item>
+                        <NavDropdown.Item href="/vehicleInfo">차량관리</NavDropdown.Item>
+                      </NavDropdown>
                         <NavDropdown title="관리자" id="admin-nav-dropdown">
                             <NavDropdown.Item href="/employeeManagement">직원 관리</NavDropdown.Item>
                             <NavDropdown.Item href="/employeeAdd">

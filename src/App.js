@@ -8,8 +8,9 @@ import AttendanceManagement from "./pages/attendanceManagement/attendanceManagem
 import EmployeeManagement from "./pages/admin/employeeManagement";
 import EmployeeAdd from "./pages/admin/employeeAdd";
 import EmployeeCommute from "./pages/admin/employeeCommute";
-
-
+import VehicleSchedule from "./pages/vehicle/VehicleSchedule";
+import VehicleInfo from "./pages/vehicle/VehicleInfo";
+import VehicleStatus from "./pages/vehicle/VehicleStatus";
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
             <Route path="/employeeManagement" element={<EmployeeManagement />} />
             <Route path="/employeeAdd" element={<EmployeeAdd />} />
             <Route path="/employeeCommute" element={<EmployeeCommute />} />
+            <Route path="/vehicleSchedule" element={<VehicleSchedule />} />
+            <Route path="/vehicleInfo" element={<VehicleInfo />} />
+            <Route path="/vehicleStatus" element={<VehicleStatus />} />
         </Routes>
     </div>
   );
