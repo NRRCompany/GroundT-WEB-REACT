@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import data from "bootstrap/js/src/dom/data";
+import {getMain} from "../../api/groundTApi";
 
 const modifyNumber = (time) => {
     return parseInt(time) < 10 ? "0" + time : time;
@@ -73,8 +74,18 @@ const Main = () => {
     const timeStyleObj = {
         fontSize: '23pt'
     }
-
-
+    // API
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const apiData = await getMain();
+                console.log(apiData);
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        };
+        fetchData();
+    }, []);
 
     return (
         <div className="homeDivWrap" style={homeDivWrapStyleObj}>
