@@ -1,0 +1,52 @@
+.table-container{
+    display: flex;
+}
+
+.attendanceManagement-table1 {
+    width: 300px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.attendanceManagement-table1 thead {
+    background-color: #C8C2BC;
+    text-align: center;
+}
+
+.attendanceManagement-table1 tbody {
+    text-align: left;
+}
+.attendanceManagement-table1 th, td{
+    border: 1px solid black;
+}
+.attendanceManagement-table1 th{
+    width: 150px;
+}
+
+.attendanceManagement-table2 {
+    width: 800px;
+}
+.attendanceManagement-table2 thead{
+    background-color: #C8C2BC;
+    text-align: center;
+}
+.attendanceManagement-table2 th, td{
+    border: 1px solid black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button-left,
+.button-right {
+    display: flex;
+}
+
+.button-right {
+    margin-left: auto;
+}
